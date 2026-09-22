@@ -37,7 +37,8 @@ def pad_sequences(sequences: list, pad_value: int = 0, max_len: int | None = Non
             elif curr_seq_len > max_len:
                 sequence[:] = sequence[0:max_len] 
                 # re-assignment vs in-place mutation
-                # sequence = sequence[0:max_len] --> this only changes the local variable sequence                           # that iteration. It does not update the list stored inside the sequences list
+                # sequence = sequence[0:max_len] --> this only changes the local variable sequence
+                # that iteration. It does not update the list stored inside the sequences list
 
     
     return np.array(sequences, dtype=int)
